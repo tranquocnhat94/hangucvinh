@@ -44,14 +44,15 @@
             .fs-5 {
                 text-align: center;
             }
+            .btn-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
             .btn {
-                display: block;
                 width: 100%;
                 text-align: center;
                 margin-bottom: 10px;
-            }
-            .text-lg-start {
-                text-align: center !important;
             }
         }
     </style>
@@ -79,10 +80,12 @@
                 <div class="col-lg-6 text-center text-lg-start">
                     <h1 class="display-4 fw-bolder">Vitamin, Sữa, Thực phẩm chức năng</h1>
                     <p class="fs-5 text-muted">Sản phẩm chính hãng từ Úc, an toàn và chất lượng.</p>
-                    <a class="btn btn-primary btn-lg px-4 me-3" href="https://m.me/chuyenhangoder123" target="_blank">
-                        <i class="bi bi-messenger"></i> Nhắn Tin Ngay
-                    </a>
-                    <a class="btn btn-outline-dark btn-lg px-4" href="contact.html">Liên Hệ Ngay</a>
+                    <div class="btn-container">
+                        <a class="btn btn-primary btn-lg px-4 me-3" href="fb://messaging/chuyenhangoder123" target="_blank">
+                            <i class="bi bi-messenger"></i> Nhắn Tin Ngay
+                        </a>
+                        <a class="btn btn-outline-dark btn-lg px-4" href="contact.html">Liên Hệ Ngay</a>
+                    </div>
                 </div>
                 <div class="col-lg-6 text-center mt-5 mt-lg-0">
                     <img class="img-fluid rounded shadow" src="assets/profile.png" alt="Sản phẩm hàng Úc xách tay" />
