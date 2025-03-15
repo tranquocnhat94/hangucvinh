@@ -17,60 +17,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
     <link href="css/styles.css" rel="stylesheet" />
-</head>
-<body class="d-flex flex-column h-100">
-    <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 sticky-top">
-        <div class="container px-5">
-            <a class="navbar-brand" href="index.html"><span class="fw-bolder text-primary">Hangucvinh.com</span></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Trang Chủ</a></li>
-                    <li class="nav-item"><a class="nav-link" href="resume.html">Giới Thiệu</a></li>
-                    <li class="nav-item"><a class="nav-link" href="projects.html">Sản Phẩm</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Liên Hệ</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <header class="py-5 bg-light">
-        <div class="container px-5 pb-5">
-            <div class="row gx-5 align-items-center">
-                <div class="col-lg-6 text-center text-lg-start">
-                    <div class="badge bg-gradient-primary-to-secondary text-white mb-3">Hàng Úc xách tay &middot; Cam kết chất lượng</div>
-                    <h1 class="display-4 fw-bolder">Vitamin, Sữa, Thực phẩm chức năng</h1>
-                    <p class="fs-5 text-muted">Sản phẩm chính hãng từ Úc, an toàn và chất lượng.</p>
-                    <a class="btn btn-primary btn-lg px-4 me-3" href="https://m.me/chuyenhangoder123" target="_blank">
-                        <i class="bi bi-messenger"></i> Nhắn Tin Ngay
-                    </a>
-                    <a class="btn btn-outline-dark btn-lg px-4" href="contact.html">Liên Hệ Ngay</a>
-                </div>
-                <div class="col-lg-6 text-center mt-5 mt-lg-0">
-                    <img class="img-fluid rounded shadow" src="assets/profile.png" alt="Sản phẩm hàng Úc xách tay" />
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <footer class="bg-white py-4 mt-auto">
-        <div class="container px-5 text-center">
-            <p class="small m-0">&copy; 2024 Trâm Oder - Hàng Úc xách tay</p>
-            <a class="small" href="contact.html">Liên hệ</a>
-        </div>
-    </footer>
-
-    <a href="https://m.me/chuyenhangoder123" target="_blank" class="messenger-button">
-        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24">
-            <path fill="#0084FF" d="M12 2C6.48 2 2 6.14 2 11.39c0 3.24 1.64 6.15 4.22 7.88v2.71c0 .62.64 1.03 1.2.75l2.94-1.46c.87.17 1.77.26 2.64.26 5.52 0 10-4.14 10-9.39C22 6.14 17.52 2 12 2zm1.45 12.26l-2.84-2.14-3.98 2.14 4.46-4.72 2.9 2.14 3.96-2.14-4.5 4.72z"/>
-        </svg>
-    </a>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" defer></script>
-    <script src="js/scripts.js" defer></script>
-    
     <style>
         .messenger-button {
             position: fixed;
@@ -90,6 +36,59 @@
         .navbar-nav .nav-link:hover {
             color: #ff5733 !important;
         }
+        @media (max-width: 768px) {
+            .display-4 {
+                font-size: 2rem;
+                text-align: center;
+            }
+            .fs-5 {
+                text-align: center;
+            }
+            .btn {
+                display: block;
+                width: 100%;
+                text-align: center;
+                margin-bottom: 10px;
+            }
+            .text-lg-start {
+                text-align: center !important;
+            }
+        }
     </style>
+</head>
+<body class="d-flex flex-column h-100">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 sticky-top">
+        <div class="container px-5">
+            <a class="navbar-brand" href="index.html"><span class="fw-bolder text-primary">Hangucvinh.com</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Trang Chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="resume.html">Giới Thiệu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projects.html">Sản Phẩm</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Liên Hệ</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="py-5 bg-light">
+        <div class="container px-5 pb-5">
+            <div class="row gx-5 align-items-center">
+                <div class="col-lg-6 text-center text-lg-start">
+                    <h1 class="display-4 fw-bolder">Vitamin, Sữa, Thực phẩm chức năng</h1>
+                    <p class="fs-5 text-muted">Sản phẩm chính hãng từ Úc, an toàn và chất lượng.</p>
+                    <a class="btn btn-primary btn-lg px-4 me-3" href="https://m.me/chuyenhangoder123" target="_blank">
+                        <i class="bi bi-messenger"></i> Nhắn Tin Ngay
+                    </a>
+                    <a class="btn btn-outline-dark btn-lg px-4" href="contact.html">Liên Hệ Ngay</a>
+                </div>
+                <div class="col-lg-6 text-center mt-5 mt-lg-0">
+                    <img class="img-fluid rounded shadow" src="assets/profile.png" alt="Sản phẩm hàng Úc xách tay" />
+                </div>
+            </div>
+        </div>
+    </header>
 </body>
 </html>
