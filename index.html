@@ -43,10 +43,7 @@
                             
                             <!-- Nút "Nhắn Tin Ngay" -->
                             <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start mb-3">
-                                <a class="btn btn-primary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder" 
-                                   href="https://m.me/100009239068457" 
-                                   target="_blank" 
-                                   rel="noopener noreferrer">
+                                <a class="btn btn-primary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder" id="messenger-btn">
                                     <i class="bi bi-messenger"></i> Nhắn Tin Ngay
                                 </a>
                                 <a class="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder" href="contact.html">Liên Hệ Ngay</a>
@@ -74,6 +71,24 @@
             </div>
         </div>
     </footer>
+
+    <!-- JavaScript mở Messenger -->
+    <script>
+        document.getElementById("messenger-btn").addEventListener("click", function () {
+            var messengerAppURL = "fb://messaging/100009239068457"; // Mở trực tiếp ứng dụng Messenger
+            var messengerWebURL = "https://m.me/100009239068457";  // Mở trên trình duyệt nếu app không có
+
+            // Kiểm tra nếu đang trên điện thoại
+            if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+                window.location.href = messengerAppURL;
+                setTimeout(function() {
+                    window.location.href = messengerWebURL;
+                }, 1500); // Nếu app không mở được, mở bằng web
+            } else {
+                window.open(messengerWebURL, "_blank");
+            }
+        });
+    </script>
 
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
