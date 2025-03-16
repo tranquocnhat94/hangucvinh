@@ -75,10 +75,10 @@
     <!-- JavaScript mở Messenger -->
     <script>
         document.getElementById("messenger-btn").addEventListener("click", function () {
-            var messengerAppURL = "fb://messaging/100009239068457"; // Mở trực tiếp ứng dụng Messenger
-            var messengerWebURL = "https://m.me/100009239068457";  // Nếu không có app, mở Messenger Web
+            var messengerAppURL = "fb-messenger://user-thread/100009239068457"; // Mở trực tiếp Messenger app
+            var messengerWebURL = "https://m.me/100009239068457"; // Link fallback nếu app không mở được
 
-            // Kiểm tra nếu đang trên điện thoại
+            // Kiểm tra nếu trên thiết bị di động
             if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
                 window.location.href = messengerAppURL;
                 setTimeout(function() {
@@ -89,6 +89,18 @@
             }
         });
     </script>
+
+    <!-- Facebook Chat Plugin -->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" 
+        src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v15.0" 
+        nonce="XnC2sLjc"></script>
+
+    <!-- Messenger Chat -->
+    <div class="fb-customerchat"
+         attribution="biz_inbox"
+         page_id="100009239068457">
+    </div>
 
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
