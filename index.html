@@ -72,16 +72,17 @@
         </div>
     </footer>
 
-    <!-- JavaScript mở Messenger -->
+    <!-- JavaScript mở Messenger với tin nhắn sẵn -->
     <script>
         document.getElementById("messenger-btn").addEventListener("click", function () {
-            var messengerAppURL = "fb-messenger://user-thread/100009239068457"; // Mở trực tiếp Messenger app
-            var messengerWebURL = "https://m.me/100009239068457"; // Link fallback nếu app không mở được
+            var messageText = encodeURIComponent("Xin chào, tôi muốn tư vấn về sản phẩm!"); // Nội dung tin nhắn mặc định
+            var messengerAppURL = "fb-messenger://user-thread/100009239068457?text=" + messageText;
+            var messengerWebURL = "https://m.me/100009239068457?text=" + messageText;
 
             // Kiểm tra nếu trên thiết bị di động
             if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
                 window.location.href = messengerAppURL;
-                setTimeout(function() {
+                setTimeout(function () {
                     window.location.href = messengerWebURL;
                 }, 1500); // Nếu app không mở được, fallback về web
             } else {
